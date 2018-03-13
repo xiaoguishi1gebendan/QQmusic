@@ -1,11 +1,12 @@
 <template>
  <div>
+   <h2 class="singerhot">热门歌单推荐</h2>
     <div class="list" v-for="(item,index) in DiscList" :key="index">
-      <ul >
-        <li><img :src="item.imgurl" alt=""></li>
+      <ul>
+        <li><img  v-lazy="item.imgurl" alt=""></li>
         <li>
-          <h3>{{item.dissname}}</h3>
-          <p>{{item.creator.name}}</p>
+          <h3>{{item.creator.name}}</h3>
+          <p>{{item.dissname}}</p>
         </li>
       </ul>
     </div>
@@ -39,20 +40,45 @@ import {ERR_OK} from '@/api/config.js'
 </script>
 
 <style>
+.singerhot{
+  text-align: center;
+  margin-top: 0.4rem !important;
+}
+.list{
+  margin-top: 0.4rem;
+
+}
 .list ul{
   overflow: hidden;
- margin-top: 30px !important;
-  padding: 0;
+  padding: 0.2rem !important;
 }
 .list ul li{
-  float: left;
+  float: left; 
 }
 .list ul li:first-child{ 
-  width: 30px;
-  height: 30px;
-  background: red;
+
+  width: 1.4rem;
+  height: 1.4rem;
+  /* background: red; */
+}
+.list ul li:last-child{
+  padding-left: 0.4rem;
+  width: 5rem;
 }
  .list ul li:first-child img{
-   width: 30px;
+   width: 1.4rem;
  }
+  .list ul li {
+    line-height: 0.68rem;
+    font-size: 0.3rem !important;
+  }
+  .list ul li p{
+    color: gray;
+    font-size: 0.28rem;
+  }
+  image[lazy=loading] {
+  width: 40px;
+  height:40px;
+  margin: auto;
+}
 </style>

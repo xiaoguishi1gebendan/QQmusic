@@ -25,10 +25,12 @@ import MTab from './components/tab/tab.vue'
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #000;
+  color: #fff;
+  background: #000;
 }
 *{
   margin: 0 !important;
+  font-size:0.3rem; 
 }
 ul{
   list-style: none;

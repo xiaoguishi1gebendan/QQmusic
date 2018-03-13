@@ -36,11 +36,11 @@
     text-align: center;
     color: gray;
     text-decoration: none;
-    font: 15px/30px "";
+    font: 16px/40px "";
     box-sizing: border-box
 }
  .router-link-active{
-     border-bottom: 2px solid #31C27C;
-     color:#31C27C;
+     border-bottom: 2px solid #ffd432;
+     color:#ffd432;
  }
 </style>
