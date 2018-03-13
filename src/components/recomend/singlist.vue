@@ -15,7 +15,6 @@
 
 <script>
 import { getDiscList} from '@/api/recommend.js'
-import {ERR_OK} from '@/api/config.js'
  export default {
    data () {
      return {
