@@ -10,7 +10,7 @@
       
     </mt-cell>
   </mt-index-section>
-  <router-view></router-view>
+ 
 </mt-index-list>
  </div>
 
@@ -28,7 +28,11 @@ import {getSingerList} from "../../api/singer.js"
    mounted () {
      this._getSingerList();
    },
-  
+  // computed: {
+  //   singerdetailele(){
+  //      return this.$store.state.ele
+  //    }
+  // },
    methods: {
      _getSingerList(){
        getSingerList().then((res)=>{
@@ -99,8 +103,15 @@ import {getSingerList} from "../../api/singer.js"
      },
 
      geItemId(ite){
-       console.log(ite)
-          this.$store.commit('getSingerId',ite)
+       this.$router.push({
+            path:`/singer/${ite.id}`
+          })
+          this.$store.commit('getSingerId',ite);
+          //  this.$store.state.ele.classList.add('zhezhaot');
+            // this.$store.state.ele.style.left=0;
+          console.log(ite)
+         
+  
       }
    },
    components: {
