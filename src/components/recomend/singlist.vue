@@ -1,34 +1,53 @@
 <template>
- <div>
-   <h2 class="singerhot">热门歌单推荐</h2>
-    <div class="list" v-for="(item,index) in DiscList" :key="index">
-      <ul>
-        <li><img  v-lazy="item.imgurl" alt=""></li>
-        <li>
-          <h3>{{item.creator.name}}</h3>
-          <p>{{item.dissname}}</p>
-        </li>
-      </ul>
-    </div>
- </div>
+<div>
+  
+        <div class="bpp">
+          <div class="main">
+            <div class="div" ref="div">
+                <div class="list" >
+                   <h1 class="singerhot">{{gequ}}</h1>
+                  <ul v-for="(item,index) in DiscList" :key="index">
+                    <li><img  v-lazy="item.imgurl" alt=""></li>
+                    <li>
+                      <h3>{{item.creator.name}}</h3>
+                      <p>{{item.dissname}}</p>
+                    </li>
+                  </ul>
+                </div>
+            </div>
+         </div>
+        </div>
+</div>
+ 
 </template>
 
 <script>
 import { getDiscList} from '@/api/recommend.js'
+import BScroll from 'better-scroll'
  export default {
    data () {
      return {
+       gequ:'',
          DiscList:[]
      }
    },
    mounted () {
      this.getListapi();  
+     this.$nextTick(()=>{
+       this.scroll=new BScroll(this.$refs.div,{
+         click:true,
+         scrollY:true,
+       })
+     })
+     
    },
    methods: {
        getListapi(){
          console.log('aa')
-            getDiscList().then((res) => {         
+            getDiscList().then((res) => {    
+              this.gequ="热门歌单推荐"     
             this.DiscList = res.data.list;
+            
               console.log(this.DiscList)
             
           
@@ -39,14 +58,33 @@ import { getDiscList} from '@/api/recommend.js'
 </script>
 
 <style>
+
+.bpp{
+  display: flex;
+  background: yellow;
+} 
+.main{
+  flex:1;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.div{
+  width: 100%;
+  height: 8rem;
+  background: red;
+}
+.list{
+  position: initial;
+  width: 100%;
+  margin-top: 0.4rem;
+
+}
 .singerhot{
   text-align: center;
   margin-top: 0.4rem !important;
 }
-.list{
-  margin-top: 0.4rem;
 
-}
 .list ul{
   overflow: hidden;
   padding: 0.2rem !important;

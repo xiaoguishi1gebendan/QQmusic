@@ -28,11 +28,7 @@ import {getSingerList} from "../../api/singer.js"
    mounted () {
      this._getSingerList();
    },
-  // computed: {
-  //   singerdetailele(){
-  //      return this.$store.state.ele
-  //    }
-  // },
+
    methods: {
      _getSingerList(){
        getSingerList().then((res)=>{

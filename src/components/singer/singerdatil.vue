@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import MusicList from './singersong.vue'
+import MusicList from './musiclist.vue'
 
 export default {
   components: {

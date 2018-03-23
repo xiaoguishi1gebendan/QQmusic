@@ -19,6 +19,7 @@
 
 <style>
   .mheader{
+    width: 100%;
     height: 0.9rem;
     background: #000;
     padding-left: 0.2rem;

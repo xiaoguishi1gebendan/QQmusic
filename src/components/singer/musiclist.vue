@@ -1,7 +1,7 @@
 <template>
  <div class="aaa">
      <h1>hahfdhafhhfghjkl;iojklghjklfghjkfghjkdfghjfghjtyuiofghjklh</h1>
-     <!-- {{singerid}} -->
+     {{singerid}}
  </div>
 </template>
 
