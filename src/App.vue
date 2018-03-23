@@ -21,6 +21,8 @@ import MTab from './components/tab/tab.vue'
 <style>
 html,body{
 height: 100%;
+width: 100%;
+overflow: hidden;
 background: #000;
 }
 #app {
@@ -42,5 +44,15 @@ ul{
 }
 li{
   list-style: none;
+}
+
+.bpp{
+  display: flex;
+} 
+.main{
+  flex:1;
+  display: block;
+  position: relative;
+  overflow: hidden;
 }
 </style>

@@ -1,7 +1,6 @@
 <template>
 <transition name="slide" >
   <div class="zhezhao" >
-    <h1>我叫周会</h1>
     <music-list></music-list>
  </div>
 </transition>
@@ -10,6 +9,8 @@
 
 <script>
 import MusicList from './musiclist.vue'
+import {getSingerDetail} from '../../api/singer.js'
+
 
 export default {
   components: {

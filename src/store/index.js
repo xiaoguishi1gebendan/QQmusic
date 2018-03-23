@@ -4,11 +4,22 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
-        singerid: {}
+        singer: {
+            id: '',
+            imgarc: '',
+            name: ''
+        },
+        getSingerDatil: [{
+            songname: '',
+            albumname: ''
+        }],
     },
     mutations: {
-        getSingerId(state, singerid) {
-            state.singerid = singerid
+        getSingerId(state, singer) {
+            state.singer = singer
+        },
+        getSingerDatil(state, singerdatil) {
+            state.getSingerDatil = singerdatil
         }
     }
 })

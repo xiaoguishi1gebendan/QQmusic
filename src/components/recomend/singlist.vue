@@ -59,20 +59,11 @@ import BScroll from 'better-scroll'
 
 <style>
 
-.bpp{
-  display: flex;
-  background: yellow;
-} 
-.main{
-  flex:1;
-  display: block;
-  position: relative;
-  overflow: hidden;
-}
+
 .div{
   width: 100%;
-  height: 8rem;
-  background: red;
+  height: 8.6rem;
+  /* background: red; */
 }
 .list{
   position: initial;
