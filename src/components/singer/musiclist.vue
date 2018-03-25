@@ -33,13 +33,6 @@
 import BScroll from 'better-scroll'
  export default {
    mounted () {
-    //      this.$nextTick(()=>{
-    //    this.scroll=new BScroll(this.$refs.div,{
-    //      click:true,
-    //      scrollY:true,
-    //    })
-    //  })
-
      setTimeout(() => {
        this.scroll=new BScroll(this.$refs.div,{
          click:true,
